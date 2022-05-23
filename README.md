@@ -5,6 +5,14 @@ We implement a snake game written in python
 Run the game with 
     python spicy_snake/snake.py
 
+### Testing
+Run the test with
+    pytest 
+    or 
+    pytest -v
+calculate test coverage with
+    pytest --cov
+
 
 ###License
 
