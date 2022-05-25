@@ -1,8 +1,10 @@
 """
 Automated Test with pytest
 (we write another program to test our application)
+
 The Discipline of TDD (Test-Driven-Development)
 -----------------------------------------------
+
 1. Write a test
 2. Run the test and make sure it fails
 3. Write just enough code to make the test pass
@@ -10,11 +12,13 @@ The Discipline of TDD (Test-Driven-Development)
 5. Clean up
 6. Run the tests again (regression testing)
 7. Back to step 1
+
 also see: Uncle Bob "Clean Code Lectures"
 """
-from spicy_snake import move, VALID_DIRECTIONS
+from spicy_snake.moves import move, VALID_DIRECTIONS
 import pytest
 import random
+
 
 @pytest.mark.parametrize('position,direction,expected', [
     # data examples
@@ -50,7 +54,3 @@ def test_move_fraction():
     position = (3.14159, 5)  # x, y
     with pytest.raises(Exception):  # test passes if an Exception is generated
         move(position, 'down')
-
-#TODO: check for the boundaries of the playing field
-
-
